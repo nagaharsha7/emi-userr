@@ -105,19 +105,24 @@ const AddLoan = () => {
           <div className="grid sm:grid-cols-2 gap-5">
             {/* Loan Name */}
             <div className="space-y-1">
-              <label className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Loan Name *</label>
+              <label className="text-xs font-semibold text-gray-500 dark:text-slate-400 uppercase tracking-wider">Gym Loan Category *</label>
               <div className="relative">
                 <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 text-gray-400">
                   <FilePlus2 className="h-4.5 w-4.5" />
                 </span>
-                <input
-                  type="text"
+                <select
                   value={loanName}
                   onChange={(e) => setLoanName(e.target.value)}
-                  placeholder="e.g. HDFC Home Loan"
-                  className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200/80 bg-white/50 text-sm focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all dark:border-slate-700 dark:bg-slate-900/50 dark:text-white"
+                  className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200/80 bg-white/50 text-sm focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all dark:border-slate-700 dark:bg-slate-900/50 dark:text-white cursor-pointer font-semibold"
                   required
-                />
+                >
+                  <option value="">-- Choose Gym Loan Category --</option>
+                  <option value="Cardio Equipment Loan">Cardio Equipment Loan</option>
+                  <option value="Strength Training Equipment Loan">Strength Training Equipment Loan</option>
+                  <option value="Free Weights & Racks Loan">Free Weights & Racks Loan</option>
+                  <option value="CrossFit & Rig Setup Loan">CrossFit & Rig Setup Loan</option>
+                  <option value="Full Commercial Gym Setup Loan">Full Commercial Gym Setup Loan</option>
+                </select>
               </div>
             </div>
 
@@ -132,7 +137,7 @@ const AddLoan = () => {
                   type="text"
                   value={lender}
                   onChange={(e) => setLender(e.target.value)}
-                  placeholder="e.g. HDFC Bank"
+                  placeholder="e.g. FitTech Finance, GymLend"
                   className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200/80 bg-white/50 text-sm focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all dark:border-slate-700 dark:bg-slate-900/50 dark:text-white"
                   required
                 />
@@ -248,7 +253,7 @@ const AddLoan = () => {
                 type="text"
                 value={purchasedProduct}
                 onChange={(e) => setPurchasedProduct(e.target.value)}
-                placeholder="e.g. X-Ray Machine, Dental Chair"
+                placeholder="e.g. Treadmill, Squat Rack, Dumbbell Set"
                 className="w-full pl-11 pr-4 py-2.5 rounded-xl border border-gray-200/80 bg-white/50 text-sm focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none transition-all dark:border-slate-700 dark:bg-slate-900/50 dark:text-white"
                 required
               />
